@@ -39,7 +39,11 @@
 
 @layer utilities {
   .btn {
-    @apply bg-blue-900 hover:bg-blue-800 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-900 focus:ring-offset-2 focus:ring-offset-blue-50 text-white font-semibold h-12 px-10 rounded-full whitespace-nowrap w-full flex items-center justify-center w-full sm:w-min;
+    @apply bg-blue-900 hover:bg-blue-800 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-900 focus:ring-offset-2 focus:ring-offset-blue-50 text-white font-semibold h-12 whitespace-nowrap flex items-center justify-center;
+  }
+
+  .btn-secondary {
+    @apply h-12 bg-white border border-blue-900 font-semibold text-blue-900 rounded-md whitespace-nowrap hover:bg-blue-50 px-8 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-900 focus:ring-offset-2 focus:ring-offset-blue-50 disabled:border-gray-500 disabled:text-gray-500 disabled:hover:bg-white  disabled:cursor-not-allowed;
   }
 
   .trans-colors {
