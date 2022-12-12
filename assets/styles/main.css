@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Montserrat";
+    font-weight: 400;
+    src: url("./../fonts/montserrat-regular.woff2") format("woff2");
+    font-style: normal;
+    font-display: swap;
+    ascent-override: 96.8%;
+    descent-override: 25.1%;
+    line-gap-override: 0%;
+  }
+
+  @font-face {
+    font-family: "Montserrat";
+    font-weight: 700;
+    src: url("./../fonts/montserrat-700.woff2") format("woff2");
+    font-style: normal;
+    font-display: swap;
+    ascent-override: 96.8%;
+    descent-override: 25.1%;
+    line-gap-override: 0%;
+  }
+
+  @font-face {
+    font-family: "Montserrat";
+    font-weight: 900;
+    src: url("./../fonts/montserrat-900.woff2") format("woff2");
+    font-style: normal;
+    font-display: swap;
+    ascent-override: 96.8%;
+    descent-override: 25.1%;
+    line-gap-override: 0%;
+  }
+}
+
+@layer utilities {
+  .btn {
+    @apply bg-blue-900 hover:bg-blue-800 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-900 focus:ring-offset-2 focus:ring-offset-blue-50 text-white font-semibold h-12 px-10 rounded-full whitespace-nowrap w-full flex items-center justify-center w-full sm:w-min;
+  }
+
+  .trans-colors {
+    @apply transition-colors duration-150 ease-in-out;
+  }
+
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .grid-center {
+    @apply grid place-content-center;
+  }
+}
+
+html {
+  font-family: sans-serif;
+  block-size: 100%;
+  background-color: #ffffff;
+  color: theme('colors.gray.600');
+}
+
+html, body , #__nuxt{
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100%;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  font-display: optional;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Montserrat", Montserrat, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+strong,
+b {
+  font-weight: 700;
+}
+
+img {
+  height: auto;
+  width: 100%;
+  display: block;
+}
+
+/* Page Transition */
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.2s ease;
+}
+
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
