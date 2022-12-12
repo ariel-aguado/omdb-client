@@ -1,4 +1,4 @@
-const apiBaseUrl = 'http://www.omdbapi.com/'
+const apiBaseUrl = 'https://www.omdbapi.com/'
 const apiKey = 'd2e9bfa0'
 
 function _fetchOMDB(url, params) {
