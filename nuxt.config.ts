@@ -19,5 +19,7 @@ export default defineNuxtConfig({
   routeRules: {
     // Render these routes with SPA
     '/**': { ssr: false },
+    // Add redirect headers
+    '/': { redirect: '/movies' },
   },
 })
